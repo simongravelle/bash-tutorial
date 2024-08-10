@@ -19,11 +19,10 @@ Files preparation
 
 To follow this tutorial, |input_file| this simple LAMMPS input file
 from the Lennard-Jones tutorial of the LAMMPS tutorials `webpage <lammps_tutorials_>`_.
-Download the LAMMPS |input_file| here.
 
 .. |input_file| raw:: html
 
-   <a href="scripts/input.lmp" target="_blank">input file</a>
+   <a href="scripts/input.lmp" target="_blank">download</a>
 
 .. _lammps_tutorials: https://lammpstutorials.github.io
 
@@ -119,14 +118,13 @@ Let us complete the script by calling LAMMPS at each step of the loop:
         cp dump.lammpstrj ${folder}
     done
 
-As always, replace *lmp* with the proper path to your LAMMPS executable. 
+Replace the *lmp* variable with the proper path to your LAMMPS executable. 
 
 The command starting with *lmp* calls the LAMMPS input *input.lmp*,
 while also passing the value of *nb2* to the LAMMPS variable named *nb2*.
 
 Once the LAMMPS simulation is over, a folder named *nbi*, with i = 1, 9, 81,
-or 729 is created by the *mkdir* command, and
-the resulting *lammpstrj* file
+or 729 is created by the *mkdir* command, and the resulting *lammpstrj* file
 is copied into it by the *cp* command.
 
 An alternative way to launch *launch_LAMMPS.sh* is to make it executable
@@ -156,7 +154,7 @@ follows:
 
 ..  code-block:: bash
 
-    ${lmp} -in input.lmp -var nb2 ${nb2} -var rdm2 $RANDOM
+    lmp -in input.lmp -var nb2 ${nb2} -var rdm2 $RANDOM
 
 The *-var rdm2 $RANDOM* was added to pass a random number to
 the LAMMPS input file. This way, every time the same input file is used,
