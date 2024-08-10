@@ -1,21 +1,14 @@
 Bash tutorial
 *************
 
-Bash scripts can help launch multiple simulations and interact with
-LAMMPS input scripts. This can be useful for instance to efficiently
-explore a parameter space.
+Bash scripts can help launch multiple simulations and interact with LAMMPS input
+scripts. This can be useful for instance to efficiently explore a parameter space.
 
-In this tutorial, a simple LAMMPS input script is launched 
-multiple times using a Bash script. At each iteration,
-the number of particles is increased.
+In this tutorial, a simple LAMMPS input script is launched multiple times using
+a Bash script. At each iteration, the number of particles is increased.
 
-.. figure:: figures/banner-dark.png
+.. figure:: figures/banner.png
     :alt: Image of the lammps LJ fluid
-    :class: only-dark
-
-.. figure:: figures/banner-light.png
-    :alt: Image of the lammps LJ fluid
-    :class: only-light
 
 Figure: Binary Lennard-Jones fluid with 1500 particles of type 1 (small spheres)
 and an increasing number of particles of type 2 (large spheres),
